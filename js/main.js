@@ -1,11 +1,11 @@
-const descriptions= [
+const DESCRIPTION = [
   'мой мир',
   'мой дом',
   'мой друг',
   'мой кот'
 ];
 
-const messages = [
+const MESSAGES = [
   'Всё отлично!',
   'В целом всё неплохо. Но не всё.',
   'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
@@ -14,7 +14,7 @@ const messages = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 
-const names = [
+const NAMES = [
   'Федор',
   'Аксинья',
   'Маргарита',
@@ -26,24 +26,17 @@ const names = [
 
 const idComments = (() => {
   const result = [];
-  for(let i = 1; i <= 100; i++){
+  for(let i = 0; i <= 100; i++){
     result[i] = i;
   }
   return result;
 
 })();
 
-const avatars = (() => {
-  const result = [];
-  for(let i = 1; i <= 6; i++){
-    result[i] = `img//avatar-${i}.svg`;
-  }
-  return result;
-
-})();
+const avatar: img/avatar-${getRandomPositiveInteger(1, 6)}.svg
 
 
-const idObject = 25;
+const IDOBJECT = 25;
 
 
 const getRandomPositiveInteger = (a, b) => {
