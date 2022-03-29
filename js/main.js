@@ -49,8 +49,8 @@ const getRandomPositiveInteger = (a, b) => {
 const getRandomArrayElement = (elements, shouldBeRemoved = false) => {
   const index = getRandomPositiveInteger(0, elements.length - 1);
   const value = elements[index];
-  if(shouldBeRemoved)
-  {delete elements[index];
+  if(shouldBeRemoved) {
+    delete elements[index];
     return value;
   }
   return elements[getRandomPositiveInteger(0, elements.length - 1)];
@@ -73,8 +73,8 @@ const createWizard = (i)=>({
   id: i,
   url: `photos/${i}.jpg`,
   description: getRandomArrayElement(descriptions),
-  likes: getRandomPositiveInteger (15, 200),
-  сomment: createUsersComments (getRandomPositiveInteger(1, idComments.length < 5? idComments.lenght:5))
+  likes: getRandomPositiveInteger(15, 200),
+  сomment: createUsersComments(getRandomPositiveInteger(1, idComments.length < 5? idComments.lenght:5))
 });
 
 const similarWizards = Array.from({length: idObject}, (v,i)=>createWizard(i+1));
